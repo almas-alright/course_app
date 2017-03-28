@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
 
-	$tasks = DB::table('tasks')->get();
-
-    return view('welcome', compact('tasks'));
-});
+Route::get('/', 'PostController@index');
+Route::get('/tasks', 'TasksController@index');
+Route::get('/tasks/{task}', 'TasksController@show');
