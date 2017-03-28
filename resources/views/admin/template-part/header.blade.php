@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="admin/assets/lib/bootstrap/css/bootstrap.css">
 
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="admin/assets/lib/font-awesome/css/font-awesome.css">
+        <link rel="stylesheet" href="{{ asset('admin/assets/lib/font-awesome/css/font-awesome.css') }}">
 
         <!-- Metis core stylesheet -->
         <link rel="stylesheet" href="admin/assets/css/main.css">
