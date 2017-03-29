@@ -13,7 +13,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a href="index.html" class="navbar-brand"><img src="assets/img/logo.png" alt=""></a>
+                            <a href="index.html" class="navbar-brand"><img src="admin/assets/img/logo.png" alt=""></a>
 
                         </header>
 

@@ -1,87 +1,93 @@
 <!DOCTYPE html>
-<html lang="{{ config('app.locale') }}">
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <!--IE Compatibility modes-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Mobile first-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>{{ config('app.name', 'Laravel') }}</title>
+    
+    <meta name="description" content="Free Admin Template Based On Twitter Bootstrap 3.x">
+    <meta name="author" content="">
+    
+    <meta name="msapplication-TileColor" content="#5bc0de" />
+    <meta name="msapplication-TileImage" content="admin/assets/img/metis-tile.png" />
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="admin/assets/lib/bootstrap/css/bootstrap.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="admin/assets/lib/font-awesome/css/font-awesome.css">
+    
+    <!-- Metis core stylesheet -->
+    <link rel="stylesheet" href="admin/assets/css/main.css">
+    
+    <!-- metisMenu stylesheet -->
+    <link rel="stylesheet" href="admin/assets/lib/metismenu/metisMenu.css">
+    
+    <!-- onoffcanvas stylesheet -->
+    <link rel="stylesheet" href="admin/assets/lib/onoffcanvas/onoffcanvas.css">
+    
+    <!-- animate.css stylesheet -->
+    <link rel="stylesheet" href="admin/assets/lib/animate.css/animate.css">
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    <!-- Scripts -->
-    <script>
-        window.Laravel = {!! json_encode([
-            'csrfToken' => csrf_token(),
-        ]) !!};
-    </script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
 
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+<body class="login">
 
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
-                        @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endif
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        @yield('content')
+      <div class="form-signin">
+    <div class="text-center">
+        <img src="admin/assets/img/logo.png" alt="Metis Logo">
     </div>
+    <hr>
+    <div class="tab-content">
+        @yield('content')
+    <hr>
+    <div class="text-center">
+        <ul class="list-inline">
+            @if (Auth::guest())
+            <li><a class="text-muted" href="{{ route('login') }}" >Login</a></li>
+            @endif
+            <li><a class="text-muted" href="{{ route('password.request') }}" >Forgot Password</a></li>
+            <li><a class="text-muted" href="{{ route('register') }}" >Signup</a></li>
+        </ul>
+    </div>
+  </div>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+
+    <!--jQuery -->
+    <script src="admin/assets/lib/jquery/jquery.js"></script>
+
+    <!--Bootstrap -->
+    <script src="admin/assets/lib/bootstrap/js/bootstrap.js"></script>
+
+
+    <script type="text/javascript">
+        // (function($) {
+        //     $(document).ready(function() {
+        //         $('.list-inline li > a').click(function() {
+        //             var activeForm = $(this).attr('href') + ' > form';
+        //             //console.log(activeForm);
+        //             $(activeForm).addClass('animated fadeIn');
+        //             //set timer to 1 seconds, after that, unload the animate animation
+        //             setTimeout(function() {
+        //                 $(activeForm).removeClass('animated fadeIn');
+        //             }, 1000);
+        //         });
+        //     });
+        // })(jQuery);
+    </script>
 </body>
+
 </html>
