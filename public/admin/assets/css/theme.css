@@ -4,6 +4,9 @@
  * @license MIT
  * @link https://github.com/puikinsh/Bootstrap-Admin-Template
  */
+
+
+
 body.boxed {
   background: url("../img/pattern/arches.png") repeat;
 }
@@ -12,11 +15,11 @@ body.boxed {
 }
 #top > .navbar .dropdown-menu > li > a:hover,
 #top > .navbar .dropdown-menu > li > a:focus {
-  background-color: #428bca;
+  background-color: #333 !important;
   color: #ffffff;
 }
 #menu {
-  background-color: #428bca !important;
+  background-color: #333 !important;
 }
 #menu > li > a {
   color: #ffffff;

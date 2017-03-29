@@ -18,3 +18,7 @@ Route::get('/demo', function(){
 });
 Route::get('/tasks', 'TasksController@index');
 Route::get('/tasks/{task}', 'TasksController@show');
+
+Auth::routes();
+
+Route::get('/c-admin', 'Admin\TestController@index');

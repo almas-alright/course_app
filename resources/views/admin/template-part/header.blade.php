@@ -8,7 +8,7 @@
         <!--Mobile first-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Metis</title>
+        <title>Admin</title>
 
         <meta name="description" content="Free Admin Template Based On Twitter Bootstrap 3.x">
         <meta name="author" content="">
@@ -24,6 +24,7 @@
 
         <!-- Metis core stylesheet -->
         <link rel="stylesheet" href="admin/assets/css/main.css">
+        <link rel="stylesheet" href="admin/assets/css/theme.css">
 
         <!-- metisMenu stylesheet -->
         <link rel="stylesheet" href="admin/assets/lib/metismenu/metisMenu.css">
