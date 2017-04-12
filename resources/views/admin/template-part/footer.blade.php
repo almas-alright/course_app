@@ -33,19 +33,19 @@
         <!-- /.modal -->
         <!-- /#helpModal -->
         <!--jQuery -->
-        <script src="admin/assets/lib/jquery/jquery.js"></script>
+        <script src="{{ asset('admin/assets/lib/jquery/jquery.js') }}"></script>
         <!--Bootstrap -->
-        <script src="admin/assets/lib/bootstrap/js/bootstrap.js"></script>
+        <script src="{{ asset('admin/assets/lib/bootstrap/js/bootstrap.js') }}"></script>
         <!-- MetisMenu -->
-        <script src="admin/assets/lib/metismenu/metisMenu.js"></script>
+        <script src="{{ asset('admin/assets/lib/metismenu/metisMenu.js') }}"></script>
         <!-- onoffcanvas -->
-        <script src="admin/assets/lib/onoffcanvas/onoffcanvas.js"></script>
+        <script src="{{ asset('admin/assets/lib/onoffcanvas/onoffcanvas.js') }}"></script>
         <!-- Screenfull -->
-        <script src="admin/assets/lib/screenfull/screenfull.js"></script>
+        <script src="{{ asset('admin/assets/lib/screenfull/screenfull.js"') }}></script>
         <!-- Metis core scripts -->
-        <script src="admin/assets/js/core.js"></script>
+        <script src="{{ asset('admin/assets/js/core.js') }}"></script>
         <!-- Metis demo scripts -->
-        <script src="admin/assets/js/app.js"></script>
+        <script src="{{ asset('admin/assets/js/app.js') }}"></script>
 
 
         <!--  <script src="admin/assets/js/style-switcher.js"></script> -->

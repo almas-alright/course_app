@@ -14,27 +14,26 @@
         <meta name="author" content="">
 
         <meta name="msapplication-TileColor" content="#5bc0de" />
-        <meta name="msapplication-TileImage" content="admin/assets/img/metis-tile.png" />
+        <meta name="msapplication-TileImage" content="{{ asset('admin/assets/img/metis-tile.png') }}" />
 
         <!-- Bootstrap -->
-        <link rel="stylesheet" href="admin/assets/lib/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="{{ asset('admin/assets/lib/bootstrap/css/bootstrap.css') }}">
 
         <!-- Font Awesome -->
         <link rel="stylesheet" href="{{ asset('admin/assets/lib/font-awesome/css/font-awesome.css') }}">
 
         <!-- Metis core stylesheet -->
-        <link rel="stylesheet" href="admin/assets/css/main.css">
-        <link rel="stylesheet" href="admin/assets/css/theme.css">
+        <link rel="stylesheet" href="{{ asset('admin/assets/css/main.css') }}">
+        <link rel="stylesheet" href="{{ asset('admin/assets/css/theme.css') }}">
 
         <!-- metisMenu stylesheet -->
-        <link rel="stylesheet" href="admin/assets/lib/metismenu/metisMenu.css">
+        <link rel="stylesheet" href="{{ asset('admin/assets/lib/metismenu/metisMenu.css') }}">
 
         <!-- onoffcanvas stylesheet -->
-        <link rel="stylesheet" href="admin/assets/lib/onoffcanvas/onoffcanvas.css">
+        <link rel="stylesheet" href="{{ asset('admin/assets/lib/onoffcanvas/onoffcanvas.css') }}">
 
         <!-- animate.css stylesheet -->
-        <link rel="stylesheet" href="admin/assets/lib/animate.css/animate.css">
-
+        <link rel="stylesheet" href="{{ asset('admin/assets/lib/animate.css/animate.css') }}">
 
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -49,11 +48,11 @@
             less = {
                 env: "development",
                 relativeUrls: false,
-                rootpath: "/admin/assets/"
+                rootpath: "{{ asset('admin/assets') }}"
             };
         </script>
-        <link rel="stylesheet" href="admin/assets/css/style-switcher.css">
-        <link rel="stylesheet/less" type="text/css" href="admin/assets/less/theme.less">
+        <link rel="stylesheet" href="{{ asset('admin/assets/css/style-switcher.css') }}">
+        <link rel="stylesheet/less" type="text/css" href="{{ asset('admin/assets/less/theme.less') }}">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.js"></script>
 
     </head>

@@ -44,7 +44,7 @@
                                 </a>
                             </div>
                             <div class="btn-group">
-                                <a href="{{ route('logout') }}"
+                                <a href="{{ route('admin.login') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();" data-toggle="tooltip" data-original-title="Logout" data-placement="bottom"
                                    class="btn btn-metis-1 btn-sm">
