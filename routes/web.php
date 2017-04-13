@@ -24,6 +24,7 @@ Route::get('/home', 'HomeController@index');
 
 
 Route::get('c-admin/home', 'Admin\TestController@index');
+Route::get('c-admin/editor', 'Admin\EditorController@index');
 
 Route::get('c-admin', 'Admin\AdminLoginController@showLoginForm')->name('admin.login');
 Route::post('c-admin', 'Admin\AdminLoginController@login');
