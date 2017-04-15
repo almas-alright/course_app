@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use Yajra\Datatables\Facades\Datatables;
+use App\User;
 class TestController extends Controller
 {
    
@@ -28,6 +29,15 @@ class TestController extends Controller
     {
         
         return view('admin.index');
+    
+    }
+
+    public function getUsers()
+    {
+        $users = User::select('*');
+
+    return Datatables::of($users)        
+        ->make(true);
     }
 
 
