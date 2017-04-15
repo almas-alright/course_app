@@ -25,7 +25,7 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('c-admin/home', 'Admin\TestController@index');
 Route::get('c-admin/editor', 'Admin\EditorController@index');
-Route::any('c-admin/users', 'Admin\TestController@getUsers')->name('abcd.users');
+Route::any('c-admin/users', 'Admin\AdminUserController@getAll')->name('abcd.users');
 
 Route::get('c-admin', 'Admin\AdminLoginController@showLoginForm')->name('admin.login');
 Route::post('c-admin', 'Admin\AdminLoginController@login');
