@@ -25,53 +25,22 @@
                     <li class="nav-header">Menu</li>
                     <li class="nav-divider"></li>
                     <li class="">
-                        <a href="dashboard.html">
+                        <a href="#">
                             <i class="fa fa-dashboard"></i><span class="link-title">&nbsp;Dashboard</span>
                         </a>
-                    </li>
+                    </li>                    
+                    
+                    
                     
                     <li class="">
-                        <a href="javascript:;">
-                            <i class="fa fa-tasks"></i>
-                            <span class="link-title">Components</span>
-                            <span class="fa arrow"></span>
+                        <a href="{{ route('abcd.trainingz') }}">
+                            <i class="fa fa-list-alt"></i><span class="link-title">&nbsp;Trainings</span>
                         </a>
-                        <ul class="collapse">
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-angle-right"></i>&nbsp; Bg Color </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-angle-right"></i>&nbsp; Bg Image </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-angle-right"></i>&nbsp; Buttons </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-angle-right"></i>&nbsp; Icon </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-angle-right"></i>&nbsp; Pricing Table </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-angle-right"></i>&nbsp; Progress </a>
-                            </li>
-                        </ul>
                     </li>
 
                     <li class="">
-                        <a href="#">
-                            <i class="fa fa-cog"></i><span class="link-title">&nbsp;Settings</span>
-                        </a>
-                    </li>
-                    <li class="">
-                        <a href="#">
-                            <i class="fa fa-thermometer-empty"></i><span class="link-title">&nbsp;Temp</span>
+                        <a href="{{ route('abcd.home') }}">
+                            <i class="fa fa-user"></i><span class="link-title">&nbsp;users</span>
                         </a>
                     </li>
 

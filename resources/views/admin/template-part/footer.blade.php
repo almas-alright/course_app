@@ -49,6 +49,8 @@
 
 
         <!--  <script src="admin/assets/js/style-switcher.js"></script> -->
+
+        @yield('scripts')
     </body>
 
 </html>
