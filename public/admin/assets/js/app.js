@@ -20,6 +20,7 @@
     };
     return Metis;
 })(jQuery, Metis || {});
+
 "use strict";
 
 ;(function ($, Metis) {

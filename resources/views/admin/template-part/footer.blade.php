@@ -34,6 +34,7 @@
         <!-- /#helpModal -->
         <!--jQuery -->
         <script src="{{ asset('admin/assets/lib/jquery/jquery.js') }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
         <!--Bootstrap -->
         <script src="{{ asset('admin/assets/lib/bootstrap/js/bootstrap.js') }}"></script>
         <!-- MetisMenu -->

@@ -13,6 +13,10 @@ class AdminTrainingController extends Controller
         $this->middleware('auth:admin');        
     }
 
+    public function create(){
+        return view('admin.training.new');
+    }
+
     public function getAll()
     {
         $trainings = Training::all();
