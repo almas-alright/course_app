@@ -31,6 +31,8 @@ class TestController extends Controller
     
     }
     
-
+    public function trainings(){
+        return view('admin.training.index');
+    }
 
 }

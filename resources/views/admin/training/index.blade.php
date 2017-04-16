@@ -10,16 +10,16 @@
     <div class="outer">
         <div class="inner bg-light lter">
             <div class="col-lg-12">
-                <h1>Admins Home</h1>
+                <h1>All Trainings</h1>
                 <hr>
 <table id="users" class="table table-hover table-condensed">
     <thead>
         <tr>
             <th class="col-md-1">#</th>
-            <th class="col-md-1">Name</th>
-            <th class="col-md-1">Email</th>
-            <th class="col-md-1">Created</th>
-            <th class="col-md-1">Updated</th>
+            <th class="col-md-2">Name</th>
+            <th class="col-md-1">Strat at</th>
+            <th class="col-md-1">End at</th>
+            <th class="col-md-1">Price</th>
             
         </tr>
     </thead>
@@ -46,13 +46,13 @@ $(document).ready(function() {
    $('#users').DataTable({
         "processing": true,
         "serverSide": true,
-        "ajax": "{{ route('abcd.users') }}",
+        "ajax": "{{ route('abcd.training') }}",
         "columns": [
             {data: 'ser', name: 'ser'},
             {data: 'name', name: 'name'},
-            {data: 'email', name: 'email'},
-            {data: 'created_at', name: 'created_at'},
-            {data: 'updated_at', name: 'updated_at'}
+            {data: 'start_at', name: 'start_at'},
+            {data: 'end_at', name: 'end_at'},
+            {data: 'price', name: 'price'},
         ]
     });
 

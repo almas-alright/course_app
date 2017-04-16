@@ -23,9 +23,13 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 
-Route::get('c-admin/home', 'Admin\TestController@index');
-Route::get('c-admin/editor', 'Admin\EditorController@index');
+Route::get('c-admin/home', 'Admin\TestController@index')->name('abcd.home');
+Route::get('c-admin/training', 'Admin\TestController@trainings')->name('abcd.trainingz');
 Route::any('c-admin/users', 'Admin\AdminUserController@getAll')->name('abcd.users');
+Route::any('c-admin/trainings', 'Admin\AdminTrainingController@getAll')->name('abcd.training');
+
+Route::get('c-admin/editor', 'Admin\EditorController@index');
+
 
 Route::get('c-admin', 'Admin\AdminLoginController@showLoginForm')->name('admin.login');
 Route::post('c-admin', 'Admin\AdminLoginController@login');
