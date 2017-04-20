@@ -23,8 +23,14 @@
 <div id="content">
     <div class="outer">
         <div class="inner bg-light lter">
-            <div class="col-lg-12">
-                <h1>Add New Training</h1>
+            <div class="col-lg-12">            	
+                <h1>
+                @hasSection('title')
+                	@yield('title')
+                @else
+                Add New Training
+                @endif
+                </h1>
                 <hr>
 
                 <div class="row">
@@ -33,7 +39,9 @@
 				    <div class="box dark">
 				        <header>
 				            <div class="icons"><i class="fa fa-edit"></i></div>
-				            <h5>Add Trainings Data</h5>
+				            
+				            <h5>Trainings Data</h5>
+
 				            <!-- .toolbar -->
 				            <div class="toolbar">
 				              <nav style="padding: 8px;">

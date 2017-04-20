@@ -12,15 +12,15 @@
 */
 
 
-Route::get('/', function(){
-	return view('front.views.home');
-});
-Route::get('/tasks', 'TasksController@index');
-Route::get('/tasks/{task}', 'TasksController@show');
+Route::get('/','HomeController@index');
+Route::get('/home', 'HomeController@index')->name('home.index');
+Route::get('/training', 'HomeController@trainings')->name('home.trainings');
+
+// Route::get('/tasks', 'TasksController@index');
+// Route::get('/tasks/{task}', 'TasksController@show');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
 
 
 Route::get('c-admin/home', 'Admin\TestController@index')->name('abcd.home');
