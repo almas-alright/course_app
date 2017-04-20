@@ -1,15 +1,19 @@
 @extends('admin.layout')
 
 @section('style')
-	<link rel="stylesheet" href="/assets/lib/inputlimiter/jquery.inputlimiter.css">
-        <link rel="stylesheet" href="/assets/lib/bootstrap-daterangepicker/daterangepicker-bs3.css">
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/Uniform.js/2.1.2/themes/default/css/uniform.default.min.css">
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.min.css">
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery-tagsinput/1.3.3/jquery.tagsinput.css">
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css">
+	<link rel="stylesheet" href="{{ asset('assets/lib/inputlimiter/jquery.inputlimiter.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/lib/bootstrap-daterangepicker/daterangepicker-bs3.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Uniform.js/2.1.2/themes/default/css/uniform.default.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-tagsinput/1.3.3/jquery.tagsinput.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css">
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/css/bootstrap3/bootstrap-switch.min.css">
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.1/css/datepicker3.min.css">
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.0.1/css/bootstrap-colorpicker.min.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.1/css/datepicker3.min.css">
+
+        <link id="ff" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.0.1/css/bootstrap-colorpicker.min.css">
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
 
 @endsection
@@ -46,13 +50,15 @@
 				            </div>            <!-- /.toolbar -->
 				        </header>
 				        <div id="div-1" class="body collapse in" aria-expanded="true" style="">
-				            <form method="post" class="form-horizontal">
+				            <form method="post" action="{{ route('training.store') }}@yield('edtID')" class="form-horizontal">
 				            	{{ csrf_field() }}
+				            	@section('editMethod')
+				            		@show
 				                <div class="form-group">
 				                    <label for="text1" class="control-label col-lg-4">Training Title</label>
 
 				                    <div class="col-lg-8">
-				                        <input id="text1" name="name" placeholder="title" class="form-control" type="text">
+				                        <input id="text1" name="name" placeholder="title" class="form-control" value="@yield('edtName')" type="text">
 				                    </div>
 				                </div>
 				                <!-- /.form-group -->                
@@ -61,18 +67,33 @@
 				                    <label for="autosize" class="control-label col-lg-4">Training Description</label>
 
 				                    <div class="col-lg-8">
-				                        <textarea id="ckeditor" class="ckeditor"></textarea>
+				                        <textarea name="description" id="ckeditor" class="ckeditor">@yield('edtDescription')</textarea>
 				                    </div>
 				                </div>
 
 				                <div class="form-group">
-		                        <label class="control-label col-lg-4" for="dp1">Field with the format specified via
-		                            options</label>
+		                        <label class="control-label col-lg-4" for="price">Course Cost</label>
 
 		                        <div class="col-lg-3">
-		                            <input class="form-control"  id="ds" type="text">
+		                            <input name="price" class="form-control" value="@yield('edtPrice')"  id="price" type="text">
 		                        </div>
-		                    </div>
+		                    	</div>
+
+		                    	<div class="form-group">
+		                        <label class="control-label col-lg-4" for="ds">Start Date</label>
+
+		                        <div class="col-lg-3">
+		                            <input name="start_at" class="form-control" value="@yield('edtSa')"  id="ds" type="text">
+		                        </div>
+		                    	</div>
+
+		                    	<div class="form-group">
+		                        <label class="control-label col-lg-4" for="de">End Date</label>
+
+		                        <div class="col-lg-3">
+		                            <input name="end_at" class="form-control" value="@yield('edtEa')"  id="de" type="text">
+		                        </div>
+		                    	</div>
 				                <!-- /.form-group -->
 
 				                <hr>
@@ -81,6 +102,20 @@
 			                    </div>
 				                <!-- /.form-group -->
 				            </form>
+				            @if($errors->any())
+				            <hr>
+				            <div class="alert alert-danger">
+				                <div class="w3-card">
+				                    <div class="w3-panel w3-red">
+				                        <ul class="w3-ul w3-red">
+				                            @foreach($errors->all() as $error)
+				                            <li>{{ $error }}</li>
+				                            @endforeach 
+				                        </ul>
+				                    </div>
+				                </div>
+				            </div>
+				            @endif
 				        </div>
 				    </div>
 				</div>
@@ -100,6 +135,17 @@
 
 
 @section('scripts')
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Uniform.js/2.1.2/jquery.uniform.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-tagsinput/1.3.3/jquery.tagsinput.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autosize.js/1.18.17/jquery.autosize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/js/bootstrap-switch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.1/js/bootstrap-datepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.0.1/js/bootstrap-colorpicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.5.10/ckeditor.js"></script>
 <script src="{{ asset('assets/lib/bootstrap3-wysihtml5-bower/dist/bootstrap3-wysihtml5.all.min.js') }}"></script>
 <script src="{{ asset('assets/lib/pagedown-bootstrap/js/jquery.pagedown-bootstrap.combined.min.js') }}"></script>
@@ -107,7 +153,7 @@
 	$(function() {
 	  // Metis.formWysiwyg();
 
-	  $('#ds').datepicker({
+	  $('#ds, #de').datepicker({
             format: 'mm-dd-yyyy'
         });
 	});

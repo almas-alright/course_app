@@ -38,6 +38,10 @@
         <!--Bootstrap -->
         <script src="{{ asset('admin/assets/lib/bootstrap/js/bootstrap.js') }}"></script>
         <!-- MetisMenu -->
+        <script src="{{ asset('admin/assets/js/core/Metis.js') }}"></script>
+        <script src="{{ asset('admin/assets/js/core/metisAdminPanel.js') }}"></script>
+        <script src="{{ asset('admin/assets/js/core/metisNavBar.js') }}"></script>
+        <script src="{{ asset('admin/assets/js/core/init.js') }}"></script>
         <script src="{{ asset('admin/assets/lib/metismenu/metisMenu.js') }}"></script>
         <!-- onoffcanvas -->
         <script src="{{ asset('admin/assets/lib/onoffcanvas/onoffcanvas.js') }}"></script>

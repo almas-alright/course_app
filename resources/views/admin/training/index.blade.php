@@ -20,6 +20,7 @@
             <th class="col-md-1">Strat at</th>
             <th class="col-md-1">End at</th>
             <th class="col-md-1">Price</th>
+            <th class="col-md-1">Action</th>
             
         </tr>
     </thead>
@@ -48,11 +49,12 @@ $(document).ready(function() {
         "serverSide": true,
         "ajax": "{{ route('abcd.training') }}",
         "columns": [
-            {data: 'ser', name: 'ser'},
+            {data: 'DT_Row_Index', name: 'DT_Row_Index'},
             {data: 'name', name: 'name'},
             {data: 'start_at', name: 'start_at'},
             {data: 'end_at', name: 'end_at'},
             {data: 'price', name: 'price'},
+            {data: 'operations', name: 'operations'},
         ]
     });
 

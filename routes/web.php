@@ -28,10 +28,9 @@ Route::any('c-admin/users', 'Admin\AdminUserController@getAll')->name('abcd.user
 
 Route::get('c-admin/editor', 'Admin\EditorController@index');
 
-Route::get('c-admin/training', 'Admin\TestController@trainings')->name('abcd.trainingz');
-Route::any('c-admin/trainings', 'Admin\AdminTrainingController@getAll')->name('abcd.training');
-Route::any('c-admin/add-training', 'Admin\AdminTrainingController@create')->name('abcd.trainingadd');
 
+Route::resource('c-admin/training', 'Admin\AdminTrainingController');
+Route::any('c-admin/trainings', 'Admin\AdminTrainingController@getAll')->name('abcd.training');
 
 
 Route::get('c-admin', 'Admin\AdminLoginController@showLoginForm')->name('admin.login');

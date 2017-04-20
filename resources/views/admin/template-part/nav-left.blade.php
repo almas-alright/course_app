@@ -28,14 +28,23 @@
                         <a href="#">
                             <i class="fa fa-dashboard"></i><span class="link-title">&nbsp;Dashboard</span>
                         </a>
-                    </li>                    
-                    
-                    
-                    
+                    </li>
+
                     <li class="">
-                        <a href="{{ route('abcd.trainingz') }}">
-                            <i class="fa fa-list-alt"></i><span class="link-title">&nbsp;Trainings</span>
-                        </a>
+                        <a href="javascript:;">
+                            <i class="fa fa-list-alt"></i><span class="link-title">&nbsp;Trainings</span><span class="fa arrow"></span>
+                            </a>
+                            <ul class="collapse">
+                              <li>
+                                <a href="{{ route('training.index') }}">
+                                  <i class="fa fa-angle-right"></i>&nbsp; All Trainings </a>
+                              </li>
+                              <li>
+                                <a href="{{ route('training.create') }}">
+                                  <i class="fa fa-angle-right"></i>&nbsp; Add New Training 
+                                  </a>
+                              </li>                              
+                            </ul>                        
                     </li>
 
                     <li class="">
@@ -43,7 +52,6 @@
                             <i class="fa fa-user"></i><span class="link-title">&nbsp;users</span>
                         </a>
                     </li>
-
                 </ul>
                 <!-- /#menu -->
             </div>
