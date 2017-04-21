@@ -57,6 +57,7 @@ class AdminTrainingController extends Controller
         $sa = Carbon::createFromFormat('m-d-Y',$request->input('start_at'))->toDateString();
         $ea = Carbon::createFromFormat('m-d-Y',$request->input('end_at'))->toDateString();
         $training = new Training;
+        $training->slug = str_slug($request->input('name'));
         $training->name = $request->input('name');
         $training->description = $request->input('description');
         $training->price = $request->input('price');
@@ -115,6 +116,7 @@ class AdminTrainingController extends Controller
         $sa = Carbon::createFromFormat('m-d-Y',$request->input('start_at'))->toDateString();
         $ea = Carbon::createFromFormat('m-d-Y',$request->input('end_at'))->toDateString();
         $training = Training::find($id);
+        $training->slug = str_slug($request->input('name'));
         $training->name = $request->input('name');
         $training->description = $request->input('description');
         $training->price = $request->input('price');

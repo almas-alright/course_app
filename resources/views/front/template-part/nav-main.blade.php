@@ -66,12 +66,12 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="navbar-nav main-menu navbar-right">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Training</a></li>
+                <li><a href="{{ route('home.index') }}">Home</a></li>
+                <li><a href="{{ route('training.index-home') }}">Training</a></li>
                 <li><a href="#">Solutions</a></li>
                 <li><a href="#">Resources</a></li>
                 <li><a href="#">Company</a></li>
-                <li><a href="#">Contact us </a></li>
+                <li><a href="{{ route('home.contact') }}">Contact us </a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
