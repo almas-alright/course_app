@@ -26,12 +26,22 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 });
 
 $factory->define(App\Training::class, function (Faker\Generator $faker) {   
-
+        $name = $faker->sentence(6, true);
     return [
-        'name' =>$faker->sentence(6, true),
+        'name' =>$name,
+        'slug' =>str_slug($name),
         'description' => $faker->paragraph(6, true),
         'price'=> $faker->numberBetween(120, 500),
         'start_at' => $faker->date('Y-m-d', 'now'),
         'end_at' => $faker->date('Y-m-d', '2017-12-30'),
+    ];
+});
+
+$factory->define(App\Post::class, function (Faker\Generator $faker) {   
+        $title = $faker->sentence(6, true);
+    return [
+        'title' => $title,
+        'slug' => str_slug($title),
+        'content' => $faker->paragraph(6, true),
     ];
 });

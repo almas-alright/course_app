@@ -33,6 +33,9 @@ Route::get('c-admin/editor', 'Admin\EditorController@index');
 
 
 Route::resource('c-admin/training', 'Admin\AdminTrainingController');
+Route::resource('c-admin/post', 'Admin\AdminPostController');
+
+Route::any('c-admin/posts', 'Admin\AdminPostController@getAll')->name('abcd.post');
 Route::any('c-admin/trainings', 'Admin\AdminTrainingController@getAll')->name('abcd.training');
 
 

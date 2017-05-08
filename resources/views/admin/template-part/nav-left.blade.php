@@ -32,6 +32,22 @@
 
                     <li class="">
                         <a href="javascript:;">
+                            <i class="fa fa-list-alt"></i><span class="link-title">&nbsp;Pages</span><span class="fa arrow"></span>
+                            </a>
+                            <ul class="collapse">
+                              <li>
+                                <a href="{{ route('post.index') }}">
+                                  <i class="fa fa-angle-right"></i>&nbsp; All Pages </a>
+                              </li>
+                              <li>
+                                <a href="{{ route('post.create') }}">
+                                  <i class="fa fa-angle-right"></i>&nbsp; Add New Page 
+                                  </a>
+                              </li>                              
+                            </ul>                        
+                    </li>
+                    <li class="">
+                        <a href="javascript:;">
                             <i class="fa fa-list-alt"></i><span class="link-title">&nbsp;Trainings</span><span class="fa arrow"></span>
                             </a>
                             <ul class="collapse">
