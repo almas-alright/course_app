@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Training;
 
 class HomeController extends Controller
 {
@@ -24,5 +25,12 @@ class HomeController extends Controller
     public function index()
     {
         return view('front.views.home');
+    }
+
+    public function trainings(){
+
+        $trainings = Training::all();
+
+        return view('front.views.trainings', compact('trainings'));
     }
 }

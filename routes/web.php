@@ -14,7 +14,7 @@
 
 Route::get('/','HomeController@index');
 Route::get('/home', 'HomeController@index')->name('home.index');
-Route::get('/training', 'HomeController@trainings')->name('home.trainings');
+Route::get('/trainings', 'HomeController@trainings')->name('home.trainings');
 
 // Route::get('/tasks', 'TasksController@index');
 // Route::get('/tasks/{task}', 'TasksController@show');

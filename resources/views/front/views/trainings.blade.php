@@ -132,60 +132,14 @@
       </div>
       <div class="col-xs-12 col-sm-8 col-md-8">
         <div class="row">
-          <div class="col-xs-12 col-sm-6 col-md-6">
-            <div class="course-box">
-              <div class="course-top text-center">
-                <h3><a href="#">CCNAX v3.0 - CCNA Routing and Switching Boot Camp</a></h3>
-                <p>Take the accelerated path to the CCNA Routing and Switching certification exam (200-125 CCNAX).
-Delivery Formats</p>
-              </div>
-              <div class="clearfix course-bottom">
-                <div class="pull-left">
-                  <h5>Delivery Formats</h5>
-                  <ul class="list-inline">
-                    <li><a href="#"><span class="lnr lnr-file-add"></span></a></li>
-                    <li><a href="#"><span class="lnr lnr-screen"></span></a></li>
-                    <li><a href="#"><span class="lnr lnr-clock"></span></a></li>
-                  </ul>
-                </div>
-                <div class="pull-right">
-                  <h5>Form</h5>
-                  <p><span class="price">$3350</span> USD</p>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="col-xs-12 col-sm-6 col-md-6">
-            <div class="course-box">
-              <div class="course-top text-center">
-                <h3><a href="#">CCNAX v3.0 - CCNA Routing and Switching Boot Camp</a></h3>
-                <p>Take the accelerated path to the CCNA Routing and Switching certification exam (200-125 CCNAX).
-Delivery Formats</p>
-              </div>
-              <div class="clearfix course-bottom">
-                <div class="pull-left">
-                  <h5>Delivery Formats</h5>
-                  <ul class="list-inline">
-                    <li><a href="#"><span class="lnr lnr-file-add"></span></a></li>
-                    <li><a href="#"><span class="lnr lnr-screen"></span></a></li>
-                    <li><a href="#"><span class="lnr lnr-clock"></span></a></li>
-                  </ul>
-                </div>
-                <div class="pull-right">
-                  <h5>Form</h5>
-                  <p><span class="price">$3350</span> USD</p>
-                </div>
-              </div>
-            </div>
-          </div>
 
+        @foreach($trainings as $training)
           <div class="col-xs-12 col-sm-6 col-md-6">
             <div class="course-box">
               <div class="course-top text-center">
-                <h3><a href="#">CCNAX v3.0 - CCNA Routing and Switching Boot Camp</a></h3>
-                <p>Take the accelerated path to the CCNA Routing and Switching certification exam (200-125 CCNAX).
-Delivery Formats</p>
+                <h3><a href="#">{{ $training->name }}</a></h3>
+                <p></p>
               </div>
               <div class="clearfix course-bottom">
                 <div class="pull-left">
@@ -198,83 +152,16 @@ Delivery Formats</p>
                 </div>
                 <div class="pull-right">
                   <h5>Form</h5>
-                  <p><span class="price">$3350</span> USD</p>
+                  <p><span class="price">$ {{ $training->price }}</span> USD</p>
                 </div>
               </div>
             </div>
           </div>
+          @endforeach
 
-          <div class="col-xs-12 col-sm-6 col-md-6">
-            <div class="course-box">
-              <div class="course-top text-center">
-                <h3><a href="#">CCNAX v3.0 - CCNA Routing and Switching Boot Camp</a></h3>
-                <p>Take the accelerated path to the CCNA Routing and Switching certification exam (200-125 CCNAX).
-Delivery Formats</p>
-              </div>
-              <div class="clearfix course-bottom">
-                <div class="pull-left">
-                  <h5>Delivery Formats</h5>
-                  <ul class="list-inline">
-                    <li><a href="#"><span class="lnr lnr-file-add"></span></a></li>
-                    <li><a href="#"><span class="lnr lnr-screen"></span></a></li>
-                    <li><a href="#"><span class="lnr lnr-clock"></span></a></li>
-                  </ul>
-                </div>
-                <div class="pull-right">
-                  <h5>Form</h5>
-                  <p><span class="price">$3350</span> USD</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          
 
-          <div class="col-xs-12 col-sm-6 col-md-6">
-            <div class="course-box">
-              <div class="course-top text-center">
-                <h3><a href="#">CCNAX v3.0 - CCNA Routing and Switching Boot Camp</a></h3>
-                <p>Take the accelerated path to the CCNA Routing and Switching certification exam (200-125 CCNAX).
-Delivery Formats</p>
-              </div>
-              <div class="clearfix course-bottom">
-                <div class="pull-left">
-                  <h5>Delivery Formats</h5>
-                  <ul class="list-inline">
-                    <li><a href="#"><span class="lnr lnr-file-add"></span></a></li>
-                    <li><a href="#"><span class="lnr lnr-screen"></span></a></li>
-                    <li><a href="#"><span class="lnr lnr-clock"></span></a></li>
-                  </ul>
-                </div>
-                <div class="pull-right">
-                  <h5>Form</h5>
-                  <p><span class="price">$3350</span> USD</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-6 col-md-6">
-            <div class="course-box">
-              <div class="course-top text-center">
-                <h3><a href="#">CCNAX v3.0 - CCNA Routing and Switching Boot Camp</a></h3>
-                <p>Take the accelerated path to the CCNA Routing and Switching certification exam (200-125 CCNAX).
-Delivery Formats</p>
-              </div>
-              <div class="clearfix course-bottom">
-                <div class="pull-left">
-                  <h5>Delivery Formats</h5>
-                  <ul class="list-inline">
-                    <li><a href="#"><span class="lnr lnr-file-add"></span></a></li>
-                    <li><a href="#"><span class="lnr lnr-screen"></span></a></li>
-                    <li><a href="#"><span class="lnr lnr-clock"></span></a></li>
-                  </ul>
-                </div>
-                <div class="pull-right">
-                  <h5>Form</h5>
-                  <p><span class="price">$3350</span> USD</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </div>
