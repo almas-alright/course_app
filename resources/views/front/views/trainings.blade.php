@@ -132,14 +132,13 @@
       </div>
       <div class="col-xs-12 col-sm-8 col-md-8">
         <div class="row">
-
-
+          
         @foreach($trainings as $training)
           <div class="col-xs-12 col-sm-6 col-md-6">
             <div class="course-box">
               <div class="course-top text-center">
-                <h3><a href="#">{{ $training->name }}</a></h3>
-                <p></p>
+                <h3><a href="{{ route('training.show-home', [$training->slug]) }}">{{ $training->name }}</a></h3>
+                <p>{{ str_limit(strip_tags($training->description), 90) }}</p>
               </div>
               <div class="clearfix course-bottom">
                 <div class="pull-left">
@@ -158,9 +157,7 @@
             </div>
           </div>
           @endforeach
-
           
-
           
         </div>
       </div>

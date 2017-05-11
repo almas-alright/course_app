@@ -13,8 +13,12 @@
 
 
 Route::get('/','HomeController@index');
+Route::get('/{slug}/{what}','HomeController@post')->name('home.post');
 Route::get('/home', 'HomeController@index')->name('home.index');
-Route::get('/trainings', 'HomeController@trainings')->name('home.trainings');
+Route::get('/contact', 'HomeController@contact')->name('home.contact');
+
+Route::get('/training', 'TrainingController@index')->name('training.index-home');
+Route::get('/training/{training}', 'TrainingController@show')->name('training.show-home');
 
 // Route::get('/tasks', 'TasksController@index');
 // Route::get('/tasks/{task}', 'TasksController@show');
@@ -30,6 +34,9 @@ Route::get('c-admin/editor', 'Admin\EditorController@index');
 
 
 Route::resource('c-admin/training', 'Admin\AdminTrainingController');
+Route::resource('c-admin/post', 'Admin\AdminPostController');
+
+Route::any('c-admin/posts', 'Admin\AdminPostController@getAll')->name('abcd.post');
 Route::any('c-admin/trainings', 'Admin\AdminTrainingController@getAll')->name('abcd.training');
 
 

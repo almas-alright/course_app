@@ -55,23 +55,13 @@
                     <div class="col-xs-12 col-sm-6 col-md-6">
                         <!-- Section Left Heading -->
                         <div class="heading">
-                            <h2 class="text-uppercase">Our strength is in our <span>partnerships</span></h2>
+                            <h2 class="text-uppercase">{{ $home->title }}</h2>
                         </div>
                         <!-- /Section Left Heading -->
 
                         <!-- left Section details -->
                         <div class="left-section-details">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At modi, amet aliquam? Obcaecati, numquam velit cumque ab! Dolorum non cumque alias nulla ea, odio nostrum voluptate magni illo dolorem sunt. Rem obcaecati et laborum eum quia, quas dolorum harum. Adipisci quas autem corporis quae commodi odit doloribus. Dolorum quam asperiores, nemo laudantium sunt, nisi velit, consequatur molestiae.
-                            </p>
-
-                            <ul class="list-item">
-                                <li>Duis dapibus odio eu tortor tempus, non posuere purus placerat.</li>
-                                <li>Nulla ultricies leo ut tincidunt egestas.</li>
-                                <li>Nullam non mi quis enim pretium feugiat.</li>
-                                <li>Duis vel nisi ut nibh efficitur sodales.</li>
-                            </ul>
-
-                            <a href="#" class="btn btn-default focus btn-more">Read More</a>
+                            {!! $home->content !!}
                         </div>
                         <!-- /left Section details -->
 

@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Training;
-
+use App\Option;
+use App\Post;
 class HomeController extends Controller
 {
     /**
@@ -24,13 +24,19 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('front.views.home');
+        $id = Option::val('static_home_page');
+        $home = Post::find($id);
+        return view('front.views.home', compact('home'));
     }
 
-    public function trainings(){
+    public function post($slug = null, $what = null){
+        $post = collect(Post::slug($slug)->first());    
+        return view('front.views.post', compact('post'));
+    }
+  
 
-        $trainings = Training::all();
+    public function contact(){
 
-        return view('front.views.trainings', compact('trainings'));
+        return view('front.views.contact');
     }
 }

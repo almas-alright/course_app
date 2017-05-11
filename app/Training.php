@@ -14,4 +14,9 @@ class Training extends Model
     protected $fillable = [
         'name', 'description', 'price', 'start_at', 'end_at',
     ];
+
+    public function scopeSlug($query, $slug)
+    {
+        return $query->where('slug', $slug);
+    }
 }
