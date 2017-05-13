@@ -13,6 +13,10 @@
 
 
 Route::get('/','HomeController@index');
+Route::get('/{slug}','HomeController@post')
+->where('slug', '^(?!c-admin)(?!home)(?!contact)(?!training)(?!login)(?!logout)(?!register)([A-z\d-\/_.]+)?')
+->name('home.post');
+
 Route::get('/home', 'HomeController@index')->name('home.index');
 Route::get('/contact', 'HomeController@contact')->name('home.contact');
 

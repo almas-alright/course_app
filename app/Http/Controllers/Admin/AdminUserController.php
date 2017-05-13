@@ -16,23 +16,11 @@ class AdminUserController extends Controller
 
     public function getAll()
     {
-        $users = User::all();
-        $ser = 1;
-        $uz;
-        foreach ($users as $user) {
-            $ca = collect($user->created_at);
-            $ua = collect($user->updated_at);
-            $uz[]= array(
-                'ser' => $ser ++,
-                'name'=>$user->name.' '.$user->lastname,
-                'email'=> $user->email,
-                'created_at'=> date('m-d-Y', strtotime($ca['date'])),
-                'updated_at'=> date('m-d-Y', strtotime($ua['date'])),
-                );
-        }
-        //return $uz;
+        $users = User::all();        
 
-         return Datatables::of($uz)->make(true);
+         return Datatables::of($users)
+         ->addIndexColumn()
+         ->make(true);
     }
     
 }

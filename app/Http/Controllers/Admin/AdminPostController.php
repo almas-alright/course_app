@@ -76,7 +76,8 @@ class AdminPostController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::find($id);
+        return view('admin.post.edit', compact('post'));
     }
 
     /**
@@ -88,7 +89,19 @@ class AdminPostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,
+            [
+            'title' => 'required',            
+            ]);
+        
+        $post = Post::find($id);
+        $post->title = $request->input('title');
+        $post->slug = str_slug($request->input('title'));
+        $post->content = $request->input('content');        
+
+        $post->save();
+
+        return redirect('c-admin/post');
     }
 
     /**

@@ -66,7 +66,7 @@
 				                    <label for="text1" class="control-label col-lg-4">Post Title</label>
 
 				                    <div class="col-lg-8">
-				                        <input id="text1" name="title" placeholder="title" class="form-control" value="@yield('edtName')" type="text">
+				                        <input id="text1" name="title" placeholder="title" class="form-control" value="@yield('edtTitle')" type="text">
 				                    </div>
 				                </div>
 				                <!-- /.form-group -->                

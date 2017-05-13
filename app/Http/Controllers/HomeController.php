@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Option;
+use App\Post;
 class HomeController extends Controller
 {
     /**
@@ -22,8 +23,15 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('front.views.home');
+    {   
+        $id = Option::val('static_home_page');
+        $home = Post::find($id);
+        return view('front.views.home', compact('home'));
+    }
+
+    public function post($slug){
+        $post = collect(Post::slug($slug)->first());    
+        return view('front.views.post', compact('post'));
     }
   
 
