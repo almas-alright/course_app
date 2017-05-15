@@ -13,7 +13,14 @@
 
 
 Route::get('/','HomeController@index');
+<<<<<<< HEAD
 Route::get('/{slug}/{what}','HomeController@post')->name('home.post');
+=======
+Route::get('/{slug}','HomeController@post')
+->where('slug', '^(?!c-admin)(?!home)(?!contact)(?!training)(?!login)(?!logout)(?!register)([A-z\d-\/_.]+)?')
+->name('home.post');
+
+>>>>>>> e51f486badeb6bf1886ef288168da701c83a9c2b
 Route::get('/home', 'HomeController@index')->name('home.index');
 Route::get('/contact', 'HomeController@contact')->name('home.contact');
 

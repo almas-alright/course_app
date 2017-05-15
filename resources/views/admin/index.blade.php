@@ -48,7 +48,7 @@ $(document).ready(function() {
         "serverSide": true,
         "ajax": "{{ route('abcd.users') }}",
         "columns": [
-            {data: 'ser', name: 'ser'},
+            {data: 'DT_Row_Index', name: 'DT_Row_Index'},
             {data: 'name', name: 'name'},
             {data: 'email', name: 'email'},
             {data: 'created_at', name: 'created_at'},

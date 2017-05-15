@@ -1,4 +1,5 @@
 <!-- Header -->
+<<<<<<< HEAD
 <header>
 <div class="header-top">
 <div class="container">
@@ -80,3 +81,9 @@
 <!-- /Main Menu -->
 </header>
         <!-- /Header -->
+=======
+<pre>
+{{ var_dump($all) }}
+</pre>
+<!-- /Header -->
+>>>>>>> e51f486badeb6bf1886ef288168da701c83a9c2b
