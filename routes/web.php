@@ -42,7 +42,11 @@ Route::resource('c-admin/post', 'Admin\AdminPostController');
 Route::any('c-admin/posts', 'Admin\AdminPostController@getAll')->name('abcd.post');
 Route::any('c-admin/trainings', 'Admin\AdminTrainingController@getAll')->name('abcd.training');
 
+// ADMIN OPTION
+Route::get('c-admin/social-links', 'Admin\AdminOptionController@socialLinks')->name('option.social');
+Route::post('c-admin/option', 'Admin\AdminOptionController@store')->name('option.store');
 
+// ADMIN AUTH
 Route::get('c-admin', 'Admin\AdminLoginController@showLoginForm')->name('admin.login');
 Route::post('c-admin', 'Admin\AdminLoginController@login');
 Route::post('admin-password/email', 'Admin\AdminForgotPasswordController@sendResetLinkEmail')->name('admin.password.email');

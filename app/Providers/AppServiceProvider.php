@@ -13,7 +13,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        view()->composer('front.template-part.nav-main', function($view){
+            $view->with('all', \App\Menu::all());
+        });
     }
 
     /**

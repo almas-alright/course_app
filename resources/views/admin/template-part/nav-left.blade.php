@@ -64,6 +64,17 @@
                     </li>
 
                     <li class="">
+                        <a href="javascript:;">
+                            <i class="fa fa-list-alt"></i><span class="link-title">&nbsp;Options</span><span class="fa arrow"></span>
+                            </a>
+                            <ul class="collapse">                              
+                                <a href="{{ route('option.social') }}">
+                                    <i class="fa fa-angle-right"></i><span class="link-title">&nbsp;Social Links</span>
+                                </a>
+                            </li>                             
+                            </ul>                        
+                    </li>
+                                        <li class="">
                         <a href="{{ route('abcd.home') }}">
                             <i class="fa fa-user"></i><span class="link-title">&nbsp;users</span>
                         </a>
