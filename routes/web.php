@@ -13,14 +13,10 @@
 
 
 Route::get('/','HomeController@index');
-<<<<<<< HEAD
-Route::get('/{slug}/{what}','HomeController@post')->name('home.post');
-=======
 Route::get('/{slug}','HomeController@post')
 ->where('slug', '^(?!c-admin)(?!home)(?!contact)(?!training)(?!login)(?!logout)(?!register)([A-z\d-\/_.]+)?')
 ->name('home.post');
 
->>>>>>> e51f486badeb6bf1886ef288168da701c83a9c2b
 Route::get('/home', 'HomeController@index')->name('home.index');
 Route::get('/contact', 'HomeController@contact')->name('home.contact');
 
@@ -46,7 +42,11 @@ Route::resource('c-admin/post', 'Admin\AdminPostController');
 Route::any('c-admin/posts', 'Admin\AdminPostController@getAll')->name('abcd.post');
 Route::any('c-admin/trainings', 'Admin\AdminTrainingController@getAll')->name('abcd.training');
 
+// ADMIN OPTION
+Route::get('c-admin/social-links', 'Admin\AdminOptionController@socialLinks')->name('option.social');
+Route::post('c-admin/option', 'Admin\AdminOptionController@store')->name('option.store');
 
+// ADMIN AUTH
 Route::get('c-admin', 'Admin\AdminLoginController@showLoginForm')->name('admin.login');
 Route::post('c-admin', 'Admin\AdminLoginController@login');
 Route::post('admin-password/email', 'Admin\AdminForgotPasswordController@sendResetLinkEmail')->name('admin.password.email');

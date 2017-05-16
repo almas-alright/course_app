@@ -1,5 +1,8 @@
+@foreach($all as $a)
+    {{ $a->title }}
+@endforeach
+
 <!-- Header -->
-<<<<<<< HEAD
 <header>
 <div class="header-top">
 <div class="container">
@@ -33,11 +36,11 @@
             @if (Route::has('login'))
             <div class="btn-group">
             @if (Auth::check())
-                <a href="javascript:" class="btn btn-success btn-cart"><i class="fa fa-user"></i> {{ Auth::user()->name }} </a>
+                <a href="javascript:" class="btn btn-success btn-cart"><i class="fa fa-option"></i> {{ Auth::option()->name }} </a>
                 <a href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();" class="btn btn-danger text-uppercase btn-sign">Sign out</a>
                 @else
-                <a href="javascript" class="btn btn-success btn-cart"><i class="fa fa-user"> </i> </a>
+                <a href="javascript" class="btn btn-success btn-cart"><i class="fa fa-option"> </i> </a>
                 <a href="{{ url('/login') }}" class="btn btn-info text-uppercase btn-sign">Sign in</a>
                 @endif
             </div>
@@ -69,7 +72,7 @@
             <ul class="navbar-nav main-menu navbar-right">
                 <li><a href="{{ route('home.index') }}">Home</a></li>
                 <li><a href="{{ route('training.index-home') }}">Training</a></li>
-                <li><a href="{{ route('home.post', ['slug'=>'our-strength-is-in-our-partnerships', 'what'=>' ']) }}">Solutions</a></li>
+                <li><a href="#">Solutions</a></li>
                 <li><a href="#">Resources</a></li>
                 <li><a href="#">Company</a></li>
                 <li><a href="{{ route('home.contact') }}">Contact us </a></li>
@@ -80,10 +83,9 @@
 </div>
 <!-- /Main Menu -->
 </header>
-        <!-- /Header -->
-=======
-<pre>
-{{ var_dump($all) }}
-</pre>
-<!-- /Header -->
->>>>>>> e51f486badeb6bf1886ef288168da701c83a9c2b
+
+
+
+<!-- $option = App\Option::firstOrNew(array('option_name' => 'url_facebook'));
+$option->option_value = "http://facebook.com/abc";
+$option->save(); -->
