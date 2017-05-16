@@ -16,6 +16,10 @@ class AppServiceProvider extends ServiceProvider
         view()->composer('front.template-part.nav-main', function($view){
             $view->with('all', \App\Menu::all());
         });
+
+        view()->composer('*', function($view){
+            $view->with('options', \App\Option::keyChain());
+        });
     }
 
     /**

@@ -23,7 +23,7 @@
 <div id="content">
     <div class="outer">
         <div class="inner bg-light lter">
-            <div class="col-lg-12">            	
+            <div class="col-lg-12">
                 <h1>
                 	Options
                 </h1>
@@ -54,7 +54,7 @@
 				            <form method="post" action="{{ route('option.store') }}" class="form-horizontal">
 				            	{{ csrf_field() }}
 
-				                <!-- <div class="form-group">
+				                <div class="form-group">
 				                    <label for="text1" class="control-label col-lg-4">Facebook Url</label>
 
 				                    <div class="col-lg-8">
@@ -67,8 +67,8 @@
 				                    <div class="col-lg-8">
 				                        <input id="text1" name="url_twitter" placeholder="http://twitter.com/abcd" class="form-control" value="{!! $social['twitter'] !!}" type="url">
 				                    </div>
-				                </div> -->
-					                <!-- <div class="form-group">
+				                </div>
+					                <div class="form-group">
 					                    <label for="text1" class="control-label col-lg-4">G+ Url</label>
 
 					                    <div class="col-lg-8">
@@ -81,8 +81,8 @@
 					                    <div class="col-lg-8">
 					                        <input id="text1" name="url_linkedin" placeholder="http://plus.google.com/abcd" class="form-control" value="{!! $social['linkedin'] !!}" type="url">
 					                    </div>
-					                </div> -->
-				             
+					                </div>
+
 
 				                <hr>
 				                <div class="form-actions no-margin-bottom" id="cleditorForm">
@@ -98,7 +98,7 @@
 				                        <ul class="w3-ul w3-red">
 				                            @foreach($errors->all() as $error)
 				                            <li>{{ $error }}</li>
-				                            @endforeach 
+				                            @endforeach
 				                        </ul>
 				                    </div>
 				                </div>
@@ -108,7 +108,7 @@
 				    </div>
 				</div>
 
-				    
+
 				</div>
 
             </div>

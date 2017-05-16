@@ -21,11 +21,10 @@
             <!-- Widget -->
             <div class="widget top-social-icon">
                 <ul class="list-inline">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                    <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                    <li><a href="{!! $options['url_facebook'] !!}"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="{!! $options['url_twitter'] !!}"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="{!! $options['url_gplus'] !!}"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="{!! $options['url_linkedin'] !!}"><i class="fa fa-linkedin"></i></a></li>
                 </ul>
             </div>
             <!-- /Widget -->
