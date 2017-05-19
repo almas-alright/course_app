@@ -459,7 +459,7 @@
 
     };
 
-    $.fn.nestable = function(params)
+    $.fn. nestable = function(params)
     {
         var lists  = this,
             retval = this;

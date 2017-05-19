@@ -9,6 +9,10 @@ var updateOutput = function (e) {
   if (window.JSON) {
     if (output) {
       output.val(window.JSON.stringify(list.nestable('serialize')));
+      var all = list.nestable('serialize');
+        $.each(all, function(index, value){ 
+          console.log(index+" : "+value);
+         });
     }
   } else {
     alert('JSON browser support required for this page.');
@@ -170,6 +174,11 @@ $(function () {
     e.preventDefault();
     addToMenu();
   });
+
+});
+
+$('#saveButt').on('click', function(e){
+    var list = e.length ? e : $(e.target);
 
 });
 
