@@ -14,8 +14,8 @@
 
 Route::get('/','HomeController@index');
 Route::get('/{slug}','HomeController@post')
-->where('slug', '^(?!c-admin)(?!home)(?!contact)(?!training)(?!login)(?!logout)(?!register)([A-z\d-\/_.]+)?')
-->name('home.post');
+->where('slug', '^(?!paywithpaypal)(?!paypal)(?!c-admin)(?!home)(?!contact)(?!training)(?!login)(?!logout)(?!register)([A-z\d-\/_.]+)?')
+->name('home.post');//paywithpaypal
 
 Route::get('/home', 'HomeController@index')->name('home.index');
 Route::get('/contact', 'HomeController@contact')->name('home.contact');
@@ -25,6 +25,10 @@ Route::get('/training/{training}', 'TrainingController@show')->name('training.sh
 
 // Route::get('/tasks', 'TasksController@index');
 // Route::get('/tasks/{task}', 'TasksController@show');
+
+Route::get('/paywithpaypal', 'AddMoneyController@payWithPaypal')->name('addmoney.paywithpaypal');
+Route::post('/paypal', 'AddMoneyController@postPaymentWithpaypal')->name('addmoney.paypal');
+Route::get('/paypal', 'AddMoneyController@getPaymentStatus')->name('payment.status');
 
 Auth::routes();
 
